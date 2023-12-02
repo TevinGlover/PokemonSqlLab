@@ -1,2 +1,13 @@
-1) 18 types
-2) evee
+ SELECT count(pokemons.primary_type) ,types.name  FROM pokemons LEFT JOIN types  ON pokemons.primary_type = types.id ;
+ SELECT count() FROM pokemons LEFT JOIN types  ON pokemons.primary_type = types.id;
+  SELECT types.name GROUP BY count(pokemons) FROM pokemons LEFT JOIN types  ON pokemons.primary_type = types.id;
+
+  SELECT COUNT(pokemons.primary_type),types.name
+  FROM pokemons
+  GROUP BY types.name;
+
+
+
+  SELECT types.name, COUNT(pokemons.primary_type) AS  FROM Orders
+  LEFT JOIN pokemons ON pokemons.primary_type = types.id
+  GROUP BY types.name;
